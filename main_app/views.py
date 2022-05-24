@@ -71,15 +71,11 @@ def stock_detail(request, stock_id):
     })
 
 
-# ticker_arr = ['AAPL', 'GOOGL' ]
-
-
 @login_required
 def stock_index(request):
     
     stocks = Stock.objects.all()
     return render(request,'stock_index.html', {'stocks': stocks})
-
 
 
 class BucketCreate(LoginRequiredMixin, CreateView):
@@ -116,8 +112,6 @@ def buckets_index(request):
   return render(request, 'main_app/buckets_index.html', data)
 
 
-# class BucketList(LoginRequiredMixin, ListView):
-#     model = Bucket
 
 
 @login_required
@@ -143,10 +137,6 @@ def bucket_detail(request, bucket_id):
         })
 
 
-
-# class BucketDetail(LoginRequiredMixin, DetailView):
-#     model = Bucket
-#     fields = '__all__'
 
 class BucketDelete(LoginRequiredMixin, DeleteView):
   model = Bucket

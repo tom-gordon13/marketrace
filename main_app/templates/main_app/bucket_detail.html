@@ -61,7 +61,7 @@
       <p>Price When Tracked: ${{ stock.price|intcomma }}</p>
 
 
-
+      
       {% if stock.stock.mr_close|percChange:stock.price >= 0 %}
       <p>Total Return: <span class="text-success">{{ stock.stock.mr_close|percChange:stock.price }}%</span></p>
       {% else %}

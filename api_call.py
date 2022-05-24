@@ -57,7 +57,6 @@ def runFunc():
 
     import schedule, time
 
-    # from background_task import background
 
     from main_app.models import Stock
 # <<<<<<< HEAD
@@ -65,8 +64,6 @@ def runFunc():
     print('test')
     schedule.every(20).seconds.do(timedFunc)
     
-    # while run:
-    #     time.sleep(1)
 
     def run_continuously(interval=1):
         cease_continuous_run = threading.Event()
